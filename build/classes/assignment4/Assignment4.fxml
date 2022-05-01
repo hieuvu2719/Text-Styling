@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane     prefHeight="600" prefWidth="900" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment4.Assignment4Controller">
+    <stylesheets>
+        <URL value="@assignment4.css"/>
+    </stylesheets>
+    <fx:define>
+        <ToggleGroup fx:id="grpSize"/>
+        <ToggleGroup fx:id="grpAlign"/>
+    </fx:define>
+    <children>
+        <VBox AnchorPane.rightAnchor="2" AnchorPane.topAnchor="2" spacing="2" >
+            <children>
+                <Label text="Font Options:"/>
+                <HBox spacing="2"> 
+                    <children>
+                        <CheckBox fx:id="bold"  />
+                        <Label text="_Bold" mnemonicParsing="true" />
+                    </children>
+                </HBox>
+                <HBox spacing="2"> 
+                    <children>
+                        <CheckBox fx:id="italic"  />
+                        <Label text="_Italic" mnemonicParsing="true" />
+                    </children>
+                </HBox>
+                <Label text ="Foreground:"/>
+                <ComboBox fx:id="foreground" editable="false" />
+                <Label text ="Background:"/>
+                <ComboBox fx:id="background"/>
+            </children>
+        </VBox>
+        <VBox AnchorPane.leftAnchor="2" AnchorPane.topAnchor="2" spacing="2" >
+            <children>
+                <HBox spacing="5">
+                    <Label text="Text Size:"/>
+                    <RadioButton fx:id="small" text= "_Small" toggleGroup="$grpSize" mnemonicParsing="true" />
+                    
+                    
+                    <RadioButton fx:id="medium" text="_Medium" toggleGroup="$grpSize" mnemonicParsing="true" />
+                    
+                    
+                    <RadioButton fx:id="large" text="_Large" toggleGroup="$grpSize" mnemonicParsing="true" />
+
+                </HBox>
+                <HBox spacing="5">
+                    <Label text="Alignment:"/>
+                    <RadioButton text="Le_ft" toggleGroup="$grpAlign" fx:id="left" mnemonicParsing="true" />
+  
+                    
+                    <RadioButton text="_Center" toggleGroup="$grpAlign" fx:id="center" mnemonicParsing="true" />
+
+                    
+                    <RadioButton text="Ri_ght" toggleGroup="$grpAlign" fx:id="right" mnemonicParsing="true" />
+
+                </HBox>
+                <HBox spacing="5">
+                    <Label text="Change Text:"/>
+                    <TextField fx:id="text" prefWidth="400" prefHeight="1" /> 
+                   
+                </HBox>
+                <HBox>
+                    <Label fx:id="result" text="Assignment 4" prefWidth="600" prefHeight="300"  />   
+                </HBox>
+            </children> 
+        </VBox>
+
+        <HBox alignment="BOTTOM_CENTER" AnchorPane.bottomAnchor="2"  fx:id = "box">  
+            <children>
+                <Button fx:id="reset" text="_Reset"  mnemonicParsing="true" />
+                <Button fx:id="exit" text="E_xit"  mnemonicParsing="true" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
